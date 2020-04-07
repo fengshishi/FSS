@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.BooksMapper">
+	<resultMap id="BaseResultMap" type="com.no1.cz.domain.Books">
+		<id column="books_id" jdbcType="INTEGER" property="booksId" />
+		<result column="books_name" jdbcType="VARCHAR"
+			property="booksName" />
+		<result column="books_writer" jdbcType="VARCHAR"
+			property="booksWriter" />
+		<result column="books_concern" jdbcType="VARCHAR"
+			property="booksConcern" />
+		<result column="books_concerndate" javaType="java.util.Date"
+			property="booksConcerndate" />
+		<result column="books_price" jdbcType="DOUBLE"
+			property="booksPrice" />
+		<result column="books_num" jdbcType="INTEGER"
+			property="booksNum" />
+		<result column="books_images" jdbcType="VARCHAR"
+			property="booksImages" />
+		<result column="books_introduce" jdbcType="VARCHAR"
+			property="booksIntroduce" />
+		<association property="booksCategory"
+			column="books_category" javaType="com.no1.cz.domain.BooksCategory"
+			resultMap="com.no1.cz.mapper.BooksCategoryMapper.BaseResultMap" />
+		<association property="booksBusiness"
+			javaType="com.no1.cz.domain.Business"
+			resultMap="com.no1.cz.mapper.BusinessMapper.BaseResultMap" />
+
+	</resultMap>
+
+	<select id="findOneBooks" resultMap="BaseResultMap">
+		select * from books
+		where books_id=#{booksId}
+	</select>
+
+	<select id="findAllBooks" resultMap="BaseResultMap">
+		select * from books
+		left join books_category
+		on books_category.category_id = books.books_category
+	</select>
+
+	<select id="findPartBooks" resultMap="BaseResultMap">
+		select * from books
+		left join books_category
+		on books.books_category = category_id
+		where category_name like '%${categoryName}%'
+	</select>
+
+	<select id="findBooksByBusinessId" resultMap="BaseResultMap">
+		select * from books
+		left join books_category
+		on books_category.category_id = books.books_category
+		where books.books_business=#{businessId}
+	</select>
+
+	<select id="selectById" resultMap="BaseResultMap"
+		parameterType="int">
+		select * from books
+		where books_id=#{booksId}
+	</select>
+
+	<update id="updateNumById" parameterType="int">
+		update books set books_num = #{booksNum}
+		where books_id = #{booksId}
+	</update>
+
+	<insert id="insertBooks">
+		insert into books (books_id, books_name, books_writer, books_concern,
+		books_price, books_num, books_images, books_category, books_business)
+		values
+		(#{booksId},#{booksName},#{booksWriter},#{booksConcern},#{booksPrice},#{booksNum},#{booksImages},#{booksCategory.categoryId},
+		#{booksBusiness.businessId})
+	</insert>
+
+    <update id="updateIntroduce" parameterType="com.no1.cz.domain.Books">
+		update books set books_introduce = #{booksIntroduce}
+		where books_id = #{booksId}
+	</update>
+
+	<delete id="deleteBooks" parameterType="int">
+		delete from books
+		where
+		books.books_id = #{booksId}
+	</delete>
+
+</mapper>

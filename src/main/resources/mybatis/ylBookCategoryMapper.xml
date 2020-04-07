@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.ylBookCategoryMapper">
+	
+	<resultMap id="BaseResultMap" type="com.no1.cz.domain.ylBookCategory">
+		<id column="yl_category_id" property="ylcategoryId" jdbcType="INTEGER" />
+		<result column="yl_category_name" property="ylcategoryName" jdbcType="VARCHAR" />
+		</resultMap>
+	
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.CollectionMapper">
+
+  <resultMap id="BaseResultMap" type="com.no1.cz.domain.Collection">
+    <id column="collection_id" jdbcType="INTEGER" property="collectionId" />
+    <result column="collection_name" jdbcType="VARCHAR" property="collectionName" />
+    <result column="collection_price" jdbcType="DOUBLE" property="collectionPrice" />
+    <association property="userId" column="user_id" javaType="com.no1.cz.domain.User" 
+    				resultMap="com.no1.cz.mapper.UserMapper.BaseResultMap"/>
+    <association property="booksId" javaType="com.no1.cz.domain.Books" 
+    				resultMap="com.no1.cz.mapper.BooksMapper.BaseResultMap"/>				
+  </resultMap>
+  
+  <insert id="insertCollection" parameterType="com.no1.cz.domain.Collection">
+   		insert into collection (collection_id, user_id, books_id, collection_name, collection_price)
+		values (#{collectionId},#{userId.userId},#{booksId.booksId},#{collectionName},#{collectionPrice})
+   </insert>
+   
+   <select id="selectByUser" parameterType="int" resultMap="BaseResultMap">
+  	SELECT * FROM collection 
+  	left join books 
+  	on books.books_id = collection.books_id  
+  	where user_id = #{userId}
+   </select>
+  
+  <delete id="deleteByCollection" parameterType="int">
+   		delete from collection where collection_id = #{collectionId}
+   </delete>
+   
+    <delete id="deleteByBooksId" parameterType="int">
+   		delete from collection where books_id = #{booksId}
+   </delete>
+  
+</mapper>

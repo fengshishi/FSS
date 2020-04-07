@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.AddressMapper">
+  <resultMap id="BaseResultMap" type="com.no1.cz.domain.Address">
+    <id column="address_id" jdbcType="INTEGER" property="addressId" />
+    <result column="address_name" jdbcType="VARCHAR" property="addressName" />
+    <result column="address_provice" jdbcType="VARCHAR" property="addressProvice" />
+    <result column="address_city" jdbcType="VARCHAR" property="addressCity" />
+    <result column="address_xianqu" jdbcType="VARCHAR" property="addressXianqu" />
+    <result column="address_detail" jdbcType="VARCHAR" property="addressDetail" />
+    <result column="address_phone" jdbcType="VARCHAR" property="addressPhone" />
+   	<association property="userId" column="user_id" 
+   			javaType="com.no1.cz.domain.User"
+			resultMap="com.no1.cz.mapper.UserMapper.BaseResultMap" /> 
+</resultMap>
+	
+	<!-- 添加地址 -->	
+	<insert id="insertAddress" parameterType="com.no1.cz.domain.User">
+		insert into address (user_id, address_name, address_provice, address_city, address_xianqu , address_detail , address_phone)
+		values (#{userId.userId}, #{addressName}, #{addressProvice}, #{addressCity}, #{addressXianqu}, #{addressDetail}, #{addressPhone})
+	</insert>
+
+	<!-- 删除地址 -->
+	<delete id="deleteAddressByUser" parameterType="int">
+		delete from address where address_id=#{addressId}
+	</delete>
+	
+	<!-- 查userId的所有地址 -->
+  	<select id="addressList" resultMap="BaseResultMap">
+		select * from address
+		left join user
+		on user.user_id = address.user_id
+		where address.user_id=#{userId}
+	</select>
+	
+	<!-- 查询address_id修改地址 -->
+   <select id="findById" parameterType="int" resultMap="BaseResultMap">
+		select * from address
+		where address_id = #{addressId}
+	</select>
+    <!--  修改地址 -->
+    <update id="updateAddress" parameterType="com.no1.cz.domain.Address">
+		update address
+		<set>
+			<if test="addressName!=null">
+				address_name=#{addressName},
+			</if>
+			<if test="addressProvice!=null">
+				address_provice=#{addressProvice},
+			</if>
+			<if test="addressCity!=null">
+				address_city=#{addressCity},
+			</if>
+			<if test="addressXianqu!=null">
+				address_xianqu=#{addressXianqu},
+			</if>
+			<if test="addressDetail!=null">
+				address_detail=#{addressDetail},
+			</if>
+			<if test="addressPhone!=null">
+				address_phone=#{addressPhone},
+			</if>
+		</set>
+		where address_id=#{addressId}
+	</update>
+  
+</mapper>

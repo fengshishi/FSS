@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.ylBookDateMapper">
+   <select id="findAll" resultMap="BaseResultMap">
+        select * from yl_book_date
+   </select>
+   
+   <select id="findById" parameterType="int" resultMap="BaseResultMap">
+		select * from yl_book_date
+		where yl_date_id = #{yldateId}
+	</select>
+	<insert id="insert" parameterType="com.no1.cz.domain.ylBookDate">
+		insert into yl_book_date(yl_date_id,yl_date_year,yl_date_book,yl_book_writer,yl_book_concern,yl_book_price,yl_book_category)
+		values (#{yldateId},#{yldateYear},#{yldateBook},#{ylbookWriter},#{ylbookConcern},#{ylbookPrice},#{ylbookCategory})
+	</insert>
+	<delete id="deleteById" parameterType="int">
+	    delete from yl_book_date
+	     where yl_date_id = #{yldateId}
+	</delete>
+	<update id="update">
+	    update yl_book_date set 
+	     yl_date_year = #{yldateYear},
+	     yl_date_book = #{yldateBook},
+	     yl_book_writer = #{ylbookWriter},
+	     yl_book_concern = #{ylbookConcern},
+	     yl_book_price = #{ylbookPrice},
+	     yl_book_category = #{ylbookCategory}
+	     where yl_date_id = #{yldateId}
+	</update>
+	
+   
+    <resultMap type="com.no1.cz.domain.ylBookDate" id="BaseResultMap">
+    <id column="yl_date_id" property="yldateId" jdbcType="INTEGER"/>
+    <result column="yl_date_year" property="yldateYear" jdbcType="DATE" />
+    <result column="yl_date_book" property="yldateBook" jdbcType="VARCHAR"/>
+    <result column="yl_book_writer" property="ylbookWriter" jdbcType="VARCHAR"/>
+    <result column="yl_book_concern" property="ylbookConcern" jdbcType="VARCHAR"/>
+    <result column="yl_book_price" property="ylbookPrice" jdbcType="DOUBLE"/>
+    <result column="yl_book_category" property="ylbookCategory" jdbcType="VARCHAR"/> 
+    </resultMap>
+</mapper>

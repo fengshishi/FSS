@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.ylBookConcernMapper">
+	
+	<select id="findByBook" parameterType="int" resultMap="BaseResultMap">
+		select * from yl_book_concern
+		where yl_book_concern.yl_concern_book = #{id}
+	</select>
+	<insert id="save" parameterType="com.no1.cz.domain.ylBookConcern">
+		insert into yl_book_concern(yl_concern_id,yl_concern_name,yl_concern_book,yl_concern_num)
+		values (#{ylconcernId},#{ylconcernName},#{ylconcernBook.ylbookId},#{ylconcernNum})
+	</insert>
+	<resultMap id="BaseResultMap" type="com.no1.cz.domain.ylBookConcern">
+		<id column="yl_concern_id" property="ylconcernId" jdbcType="INTEGER" />
+		<result column="yl_concern_name" property="ylconcernName" jdbcType="VARCHAR" />
+		<result column="yl_concern_book" property="ylconcernBook.ylbookId" jdbcType="INTEGER" />
+		<result column="yl_concern_num" property="ylconcernNum" jdbcType="INTEGER" />
+	</resultMap>
+	
+</mapper>

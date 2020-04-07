@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.SuperAdminMapper">
+	<select id="login" parameterType="map" resultMap="BaseResultMap">
+		select superadmin_name,superadmin_pwd from superadmin
+		where superadmin_name=#{superadminName} and
+		superadmin_pwd=#{superadminPwd}
+	</select>
+	
+	<resultMap type="com.no1.cz.domain.SuperAdmin" id="BaseResultMap">
+		<id column="superadmin_id" property="superadminId" jdbcType="INTEGER" />
+		<result column="superadmin_name" property="superadminName"
+			jdbcType="VARCHAR" />
+		<result column="superadmin_pwd" property="superadminPwd" jdbcType="VARCHAR" />
+		
+	</resultMap>
+
+</mapper>

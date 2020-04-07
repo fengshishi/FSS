@@ -1,0 +1,1966 @@
+﻿    /*-----------------------------------------------------------------------------
+* @Description: 首页样式 (user-center.css)
+* @Version: 	V1.0.0
+* @author: 		dingrRiLi(81417966@qq.com)
+* @date			2013.02.18
+* ==NOTES:=============================================
+* v1.0.0(2013.02.18):
+* 	初始生成 
+*$__common                     
+*$__usercnter-index             主页
+*$__complaint-first             投诉1
+/*_applicationRrfund-first      退款申请1
+/*_applicationRrfund-fifth      退款申请5
+/*_mail-first.html              邮1
+/*_mail-second.html             邮2
+/*_myOrder.html                 我的订单
+/*_PurchaseGoods.html           我的商品
+/*_accountSecurity.html         账户安全
+/*_browsingHistory.html         浏览历史
+/*_pamentConfirmation.html      汇款确认
+* ---------------------------------------------------------------------------*/
+/*__common
+--------------------------------------------------------------------------------------------*/
+.container{
+	padding-top: 0;
+	background-color: #ffffff;
+}
+.user-content{
+	position: relative;
+	min-height: 1000px;
+	_height: 1000px;
+	padding-left: 160px;
+	background: url("../../img/mall/userCenter/user-content-bg.gif") repeat-y;
+	zoom: 1;
+}
+p.notice{
+	margin-bottom: 19px;
+}
+p.notice span{
+	color: #616161;
+}
+.userCenter-content{
+	height: 100%;
+}
+.mt5{
+    margin-top: 5px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt12{
+    margin-top: 12px;
+}
+.mt17{
+    margin-top: 17px;
+}
+.mt20{
+    margin-top: 20px;
+}
+/*__usercnter-index
+--------------------------------------------------------------------------------------------*/
+.userCenter-content .personalResources{
+	height: 239px;
+	background:#fffce1;
+	border-right: #fcf9f0 1px solid;
+	border-top: #fcf9f0 1px solid;
+	border-bottom:#f8c38f 1px solid;
+	box-shadow: 0px 8px 0px #f8f8f8, 0 0 8px #f8f8f8;
+	position: relative;
+    zoom: 1;
+	margin-bottom: 23px;
+	padding-bottom: 33px;
+}
+.userCenter-content img.personImg{
+	width:101px;
+	height: 101px;
+	border: 1px solid #ece5dd;
+	position: absolute;
+	top:28px;
+	left:39px;
+}
+.userCenter-content img.vipimg{
+	position: absolute;
+	top:136px;
+	left:78px;
+}
+.userCenter-content .personalResources-right{
+	position: absolute;
+	top:22px;
+	left:171px;
+}
+.userCenter-content .personalResources-right h1{
+	font-size: 16px;
+	padding-left: 7px;
+	font-family: "微软雅黑";
+	}
+
+.userCenter-content .personalResources-right h1 a{
+	color: #0e70c9;
+	font-size: 12px;
+	font-family: "新宋体";
+	font-weight: normal;
+}
+.userCenter-content .personalResources-right h1 span{
+color: #0e70c9;
+}
+.userCenter-content .personalResources-right p{
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+    zoom: 1;
+	padding-left: 7px;
+}
+.userCenter-content .personalResources-right img.question{
+	position: absolute;
+	top:20px;
+	left:111px;
+}
+.userCenter-content .personalResources-right p span.question{
+/* 	background: url("../../img/mall/userCenter/question.jpg") 0px center no-repeat; */
+}
+.red{
+	color:#d40000;
+}
+.blue,.blue a{
+	color:#136ec2;
+	font-weight: bold;
+}
+span .blue{
+	color: #333039;
+}
+.userCenter-content .personalResources-right p.line{
+	width:590px;
+	height: 25px;
+	border-bottom: 1px solid #ede6dc;
+}
+.userCenter-content .personalResources-right table{
+	width: 400px;
+	margin-top: 20px;
+}
+.userCenter-content .personalResources-right table tr{
+	height: 30px;
+	line-height: 30px;
+}
+h1.title{
+border-bottom:#196bc1 3px solid;
+font-size: 14px;
+line-height: 23px;
+height:23px;
+padding-left: 11px;
+margin-bottom: 5px;
+}
+h1.blue-line{
+	border-bottom:3px solid #136ec2;
+	font-size: 14px;
+	line-height: 27px;
+	height:27px;
+	padding-left: 21px;
+}
+.fontWeight6{
+	font-weight: 600;
+}
+.likebook-list li{
+   float: left;
+    height: 240px;
+    text-align: center;
+    width: 140px;
+    margin-right: 18px;
+}
+.bottomLine{
+	border-bottom: 1px #f4f4f4 solid;
+}
+.likebook-list{
+	padding-top: 26px;
+	padding-left: 15px;
+}
+.likebook-list li{
+	width: 142px;
+}
+.likebook-list li img{
+	width: 95px;
+	height: 130px;	
+}
+.likebook-list li a.grey-line{
+	display: block;
+	width: 140px;
+	height: 132px;
+	border: #e7e7e7 1px solid;	
+	padding-top: 8px;
+}
+.likebook-list ul{
+	margin-left: 4px;
+}
+.likebook-list li .book-intro{
+  color: #1f6eb3;
+  display: block;
+  height: 38px;
+  width: 140px;
+  overflow: hidden;    
+  text-align: center;
+}
+
+.likebook-list .price{
+	color: #d6000a;
+	font-size: 14px;
+	font-weight: 600;
+}
+.likebook-list del{
+	color:#686868;
+	font-size: 12px;
+	font-weight: normal;
+}
+.likebook-list li.greyline{
+	border-bottom: 1px solid #f5f5f5;
+}
+a.black{
+	color: #000;
+}
+/*__complaint-first 
+--------------------------------------------------------------------------------------------*/
+.pink-line{
+	position: relative;
+	zoom: 1;
+	height: 33px;
+	line-height: 33px;
+	background: #fffbe1;
+	border-bottom: 1px solid #febf90;
+	border-top: 1px solid #febf90;
+	padding-left: 23px;
+	margin-bottom: 16px;
+	margin-top: 3px;
+	color: #888888;
+}
+.pink-line .i-wanna-cmplt{
+	position: absolute;
+	right: 15px;
+	top: 50%;
+	width: 73px;
+	height: 23px;
+	margin-top: -11px;
+	background: url(../../img/mall/btn-complaint.png) left top no-repeat;
+	text-indent: -10000px;
+}
+.default-pink-line{
+	color: #333333;
+}
+.pink-mail{
+	height: 33px;
+	line-height: 33px;
+	background: #fffbe1;
+	border-bottom: 1px solid #febf90;
+	border-top: 1px solid #febf90;
+	padding-left: 40px;
+	margin-bottom: 16px;
+	margin-top: 3px;
+	color: #666666;
+	position: relative;
+    zoom: 1;
+}
+.pink-line span.bigred{
+	color: #D40000;
+	font-size: 16px;
+	font-weight: 600;
+}
+.pink-line span.num{
+	padding: 0;
+	color: #d70000;
+	font-size: 16px;
+	font-family: Arial;
+}
+.userCenter-content table{
+	width: 100%;
+	text-align: center;
+	color: #666;
+}
+table.tableIndex{
+	text-align: left;
+}
+.userCenter-content table thead{
+	background: #f4f4f4;
+	border-bottom: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	text-align: middle;
+}
+.userCenter-content table thead td{
+	height: 24px;
+	line-height: 24px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	text-align: middle;
+}
+.is-read{
+  color: #666;
+}
+.userCenter-content table td.tableOtherSize{
+}
+.userCenter-content table td.tableComplaint{
+	height: 30px;	
+	padding-top: 26px;
+	padding-bottom: 17px;
+}
+.userCenter-content table td.tableReply{
+	color: #333;
+}
+td.tableReply span{
+	color: #888;
+	padding-left: 15px;
+}
+td.myAsk{
+	height: 117px;
+}
+.userCenter-content table td.tdTop{
+	text-align: top;
+}
+.userCenter-content table td.tdLeft{
+	padding: 7px 2px;
+	text-align: left;
+}
+.userCenter-content table td.tdCenter{
+	text-align: center;
+}
+.greyLine{	
+	border-bottom: 1px solid #ebebeb;
+}
+
+.issues-panel a{
+    color: #000;
+}
+.issues-panel .highlight{
+    color: #0678be;
+    font-weight: bold;
+}
+/*.userCenter-content table td span a{
+	color: #0678be;
+	font-weight: bold;
+}*/
+.userCenter-content table td .markdown{
+	padding-left: 10px;
+	background: url("../../img/mall/userCenter/downRow.gif") 0 50% no-repeat;
+}
+/*__mycoupon.html
+--------------------------------------------------------------------------------------------*/
+td.myCoponTable{
+	height: 38px;
+	color: #333333;
+	border-bottom: 1px solid #eaeaea;
+}
+.price{
+	font-family: '微软雅黑';
+	font-size: 14px;
+}
+td.myCoponTable a{
+	color: #1c72c9;
+}
+p.notice{
+	margin-top:19px;
+	margin-left: 26px;
+	color: #a4a4a4;
+}
+p.pink-line span{
+	padding-left: 8px;
+	color: #aaa;
+}
+p.pink-line span.red{
+	color: #D40000;
+}
+td.myCoponBlue{
+	line-height: 38px;
+	height: 38px;
+	color: #136ec2;
+	border-bottom: 1px solid #eaeaea;
+}
+/*_applicationRrfund-first.html
+--------------------------------------------------------------------------------------------*/
+.page .red{
+	padding: 0;
+}
+p.notice a{
+	margin-left: 289px; 
+	color: #1366b2;
+}
+
+.userCenter-content h2{
+	height: 27px;
+	line-height: 27px;
+	background: #f4f4f4;
+	border-bottom: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	padding-left: 20px;
+	margin-top: 18px;
+	color: #0f6dcf;
+	position: relative;
+    zoom: 1;
+}
+.user-content div.refundP{
+	width: 730px;
+	position: relative;
+    zoom: 1;
+	padding-left: 90px;
+	height: 23px;
+	line-height: 23px;
+	color: #888888;
+  margin-bottom: 8px;
+}
+p.ntoice-grey{
+	color:#8b8b8b;
+	position: absolute;
+	top:-3px;
+	left:717px;
+	width:100px;
+}
+.user-content div.refundP label.refundInput{
+  position: absolute;
+  top:0px;
+  left: 0px;
+  text-align: right;
+  width: 88px;
+  color: #000;
+  font-size: 12px;
+}
+.user-content div.refundP input.base{
+ border: 1px solid #a4a4a4;
+    box-shadow: 2px 2px 3px #DDDDDD inset;
+    font-size: 100%;
+    height: 17px;
+    padding: 3px 5px;
+    width: 63px;
+    }
+.userCenter-content button.sure{
+	margin-left: 111px;
+	width: 53px;
+	height: 23px;
+	background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat;
+	border: none;
+	text-align: center;
+	margin-top: 18px;
+}
+.userCenter-content button.Isure{
+	margin-left: 90px;
+	width: 53px;
+	height: 23px;
+	background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat;
+	border: none;
+	text-align: center;
+	margin-top: 18px;
+}
+.userCenter-content button.cancel{
+	margin-left: 10px;
+	width: 53px;
+	height: 23px;
+	background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat;
+	border: none;
+	text-align: center;
+	margin-top: 10px;
+}
+.userCenter-content p.line{
+	width:100%;
+	height: 20px;
+	border-bottom: 1px solid #ede6dc;
+}
+.userCenter-content p.pink-line span.start{
+	color: #E40001;
+    font-size: 12px;
+
+}
+.userCenter-content select.newSelect{
+	width: 83px;
+	height: 23px;
+	border: 1px solid #8498bd;
+}
+.userCenter-content input.inupt-new{
+	width: 180px;
+	border: 1px solid #A4A4A4;
+	box-shadow: 2px 2px 3px #DDDDDD inset;
+	font-size: 100%;
+	height: 17px;
+	padding: 3px 5px;
+}
+.userCenter-content input.inupt-first{
+	width: 102px;
+	height: 19px;
+	padding: 2px;
+	background: url("../../img/mall/userCenter/user-input.gif") no-repeat;
+	border: none;
+}
+  /*_applicationRrfund-fifth.html
+--------------------------------------------------------------------------------------------*/
+p.notice-mssage{
+	position: absolute;
+	top:1px;
+	left: 80px;
+	color: #88867A;
+	font-weight: normal;
+}
+select.secondSelect{
+	width: 122px;
+	height: 23px;
+	border: 1px solid #8498bd;
+}
+
+/*_mail-first.html
+--------------------------------------------------------------------------------------------*/
+a.mail-a{
+	color: #000;
+	margin-right: 42px;
+	display: block;
+	float: left;
+}
+table td.mailTable{
+  background: none repeat scroll 0 0 #F4F4F4;
+  border-bottom: 1px solid #E4E4E4;
+  border-top: 1px solid #E4E4E4;
+  height: 31px;
+  line-height: 31px;
+}
+table tr.not-read{
+  color: #333;
+}
+table td.mail-cell{
+  border-bottom: 1px solid #E4E4E4;
+  border-top: 1px solid #E4E4E4;
+  height: 31px;
+  line-height: 31px;
+}
+table td.mail-cell a{
+  color: #2364b4;
+}
+button.del{
+  width: 53px;
+  height: 23px;
+  background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat;
+  border: none;
+  text-align: center;
+  float: left;
+}
+
+
+/*_mail-second.html
+--------------------------------------------------------------------------------------------*/
+a.inbox{
+	display: block;
+	float: left;
+	height: 35px;
+  margin-right: 24px;
+	background: url("../../img/mall/userCenter/inbox.jpg") 0px 7px no-repeat;
+	padding-left: 23px;
+	color: #333333;
+}
+a.DraftBox{
+	display: block;
+	float: left;
+	height: 35px;
+	margin-right: 24px;
+	background: url("../../img/mall/userCenter/DraftBox.jpg") 0px 8px no-repeat;
+	padding-left: 20px;
+	color: #333333;
+}
+a.Dustbin{
+	display: block;
+	float: left;
+	height: 35px;
+	margin-right: 24px;
+	background: url("../../img/mall/userCenter/Dustbin.jpg") 0px 7px no-repeat;
+	padding-left: 23px;
+	color: #333333;
+}
+a.writeMail{
+	display: block;
+	float: left;
+	height: 35px;
+	margin-right: 24px;
+	background: url("../../img/mall/userCenter/writeMail.jpg") 0px 7px no-repeat;
+	padding-left: 23px;
+	color: #333333;
+}
+.inupt-title{
+	border: 1px solid #A4A4A4;
+  box-shadow: 2px 2px 3px #DDDDDD inset;
+  font-size: 100%;
+  height: 17px;
+  padding: 3px 5px;
+  width: 411px;
+}
+input.inupt-mail-W109{
+    border: 1px solid #A4A4A4;
+    box-shadow: 2px 2px 3px #DDDDDD inset;
+    font-size: 100%;
+    height: 17px;
+    padding: 3px 5px;
+    width: 99px;
+}
+input.inupt-mail-W420{
+  border: 1px solid #A4A4A4;
+  box-shadow: 2px 2px 3px #DDDDDD inset;
+  font-size: 100%;
+  height: 17px;
+  padding: 3px 5px;
+  width: 410px;
+}
+input.inupt-mail-W207{
+	width: 205px;
+	height: 19px;
+	padding: 2px;
+	background: url("../../img/mall/userCenter/refund-input2.gif") no-repeat;
+	border: none;
+}
+input.inupt-mail-W149{
+	width: 146px;
+	height: 19px;
+	padding: 2px;
+	background: url("../../img/mall/userCenter/refund-input3.gif") no-repeat;
+	border: none;
+}
+.textTheme {
+  width: 626px;
+}
+.textTheme textarea{
+	width: 616px;
+	min-height: 262px;
+	*height: 260px;
+	padding: 5px 5px;
+	font-size: 12px;
+	border: 1px solid #A4A4A4;
+}
+p.fontTop{
+	text-align: 
+}
+button.send{
+  margin-left: 86px;
+  margin-top: 30px;
+}
+.btn-style1{
+  width: 53px;
+  height: 23px;
+  background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat;
+  border: none;
+  margin-left:93px;
+}
+.btn-style2{
+	width: 65px;
+	height: 23px;
+	background: url("../../img/mall/userCenter/btn-style2.gif") no-repeat;
+	border: none;
+}
+button.save{
+  margin-left: 20px;
+  margin-top: 30px;
+}
+button.del-second{
+  margin-left: 20px;
+  margin-top: 30px;
+}
+div.mail-input{
+	position: relative;
+    zoom: 1;
+	height: 23px;
+	line-height: 23px;
+	margin-bottom: 14px;
+	padding-left: 86px;
+	color: #888;
+}
+
+div.mail-input div span.can-return-money{
+	color:#ff0000;
+	font-size:15px;
+}
+div.mail-input label.refundInput {
+  color: #000000;
+  font-size: 12px;
+  left: 0;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 80px;
+}
+div.mail-content {
+  color: #888888;
+  font-size: 14px;
+  line-height: 38px;
+  padding-left: 86px;
+  position: relative;
+  zoom: 1;
+  text-align: top;
+}
+div.mail-content label.refundInput {
+  color: #000000;
+  left: 0;
+  position: absolute;
+  text-align: right;
+  top: 0;
+  width: 80px;
+  height: 23px;
+  line-height: 23px;
+  font-size: 12px;
+}
+ /*_myIntegral.html
+--------------------------------------------------------------------------------------------*/
+p.pink-black{ 
+ 	background: none repeat scroll 0 0 #FFFCE1;
+	border-bottom: 1px solid #FBBE8F;
+	border-top: 1px solid #FBBE8F;
+	color: #000;
+	height: 35px;
+	line-height: 35px;
+	margin-bottom: 6px;
+	margin-top: 3px;
+	padding-left: 22px;
+	position: relative;
+    zoom: 1;
+}
+
+p.pink-black span {
+  color: #D40000;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: '微软雅黑';
+}
+button.changeIntegral{
+	position: absolute;
+	right:8px;
+	top:8px;
+	width: 73px;
+	height: 23px;
+	background: url("../../img/mall/userCenter/quan.jpg") no-repeat;
+	border: none;
+	margin-top: -2px;
+}
+p.bread{
+	line-height: 26px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	margin-left: 22px;
+	padding-right: 14px;
+}
+p.bread a,
+p.bread span{
+	color: #676767;
+}
+p.bread a.goBR{
+	float:right;
+	color:#216DC1;
+	display:block;
+} 
+p.bread span.current{
+	color: #216DC1;
+	font-weight: 600;
+}
+p.bread a.current{
+	color: #216DC1;
+	font-weight: 600;
+}
+p.paeup{
+	padding-right: 20px;
+	text-align: right;
+}
+/*p.paeup a{
+  border: 1px solid #CCCCCC;
+  color: #757575;
+  display: inline-block;
+  font-weight: bold;
+  height: 16px;
+  margin-right: 3px;
+  min-width: 15px;
+  _width:15px;
+  padding: 3px;
+  text-align: center;
+}
+p.paeup a.nextPage {
+  background: url("../../img/mall/userCenter/notes.png") no-repeat scroll right center transparent;
+  width: 60px;
+  color: #1468a6;
+}
+p.paeup a.upPage{
+  background: url("../../img/mall/userCenter/upPageImage.jpg") no-repeat scroll left center transparent;
+  width: 60px;
+  color: #000;
+}
+p.paeup a.present{
+	color: #ff4500;
+	border: 1px solid #ff4500;
+	background: #f6f6f4;
+}*/
+/*_myOrder.html
+--------------------------------------------------------------------------------------------*/
+span.historyOrder{
+	height: 19px;
+	line-height: 19px;
+	color: #656565;
+	float: right;
+}
+img.bookimg{
+	width: 41px;
+	height: 56px;
+}
+.list-book{
+	width: 58px;
+	height: 58px;
+	border: 1px solid #e6e6e6;
+	display: inline-block;
+	text-align: center;
+}
+
+
+img.viewbookimg{
+	margin-left: 5px;
+  float: left;
+      height: 56px;
+    width: 41px;
+}
+td.myorderTable{
+	height: 20px;
+	line-height: 20px;
+}
+a.cancel{
+	color: #0d70cb;
+}
+/*_PurchaseGoods.html
+--------------------------------------------------------------------------------------------*/
+td.fontleft{
+	line-height: 18px;
+	padding-left: 15px;
+	text-align: left;
+	overflow: hidden;
+}
+td.fontleft div{
+	width: 383px;
+	height: 60px;
+	overflow: hidden;
+}
+/*_accountSecurity.html
+--------------------------------------------------------------------------------------------*/
+p.verification{
+	position: relative;
+    zoom: 1;
+	height: 33px;
+}
+p.verification img{
+	position: absolute;
+	left: 90px;
+	top: 0;
+}
+.mod-account{
+	padding: 16px 0 0 22px;
+}
+p.verification .fontcolorBase{
+	position: absolute;
+	left: 202px;
+	top: 15px;
+}
+p.verification .blue{
+	position: absolute;
+	left: 254px;
+	top: 15px;
+}
+button.Recharge{
+  background: url("../../img/mall/userCenter/Recharge.gif") no-repeat scroll 0 0 transparent;
+  border: medium none;
+  height: 23px;
+  right: 90px;
+  margin-top: -2px;
+  position: absolute;
+  top: 8px;
+  width: 73px;
+}
+button.Refund{
+  background: url("../../img/mall/userCenter/Refund.gif") no-repeat scroll 0 0 transparent;
+  border: medium none;
+  height: 23px;
+  right:8px;
+  margin-top: -2px;
+  position: absolute;
+  top: 8px;
+  width: 73px;
+}
+td.Remarks{
+	text-align: left;
+	padding-left: 50px;
+}
+/*_collection-first.html
+--------------------------------------------------------------------------------------------*/
+
+span.collectTime {
+  color: #656565;
+  margin-left: 400px;
+}
+td.downRow{
+	background: url("../../img/mall/userCenter/downRow.jpg") left center no-repeat;
+}
+a.buy{
+	color: #126bbf;
+}
+.collectionTable input{
+	float: left;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+.collectionTable span{
+	float: left;
+	margin-left: 9px;
+	margin-top: 4px;
+}
+.collectionTable label.select-all{
+  position: static;
+  float: left;
+  margin-left: 9px;
+  margin-top: 4px;
+}
+.collectionTable select.moveTo{
+	float: left;
+	margin-left: 7px;
+	margin-top: 3px;
+	height: 20px;
+	width: 105px;
+	border: 1px solid #8498BD;
+}
+.collectionTable button.classManage{
+  float: left;
+  margin-left: 10px;
+  margin-top: 1px;
+  width: 65px;
+  height: 23px;
+  line-height: 23px;
+  background: url("../../img/mall/userCenter/btn-style2.gif") no-repeat;
+  border: none;
+}
+.collectionTable button.bigDele{
+  float: right;
+  margin-right: 14px;
+  width: 65px;
+  height: 23px;
+  line-height: 23px;
+  background: url("../../img/mall/userCenter/btn-style2.gif") no-repeat;
+  border: none;
+}
+button.BuyBulk{
+  float: right;
+  margin-right: 10px;
+  width: 65px;
+  height: 23px;
+  line-height: 23px;
+  background: url("../../img/mall/userCenter/btn-style2.gif") no-repeat;
+  border: none;
+}
+/*_collection-fourth.html
+--------------------------------------------------------------------------------------------*/
+.collectMagement{
+	height: 100%;
+	border-top: 1px solid #e5e5e5;
+	border-bottom: 1px solid #e5e5e5;
+	background: #f4f4f4;
+	padding-left: 39px;
+	padding-top: 25px;
+}
+p.fileManagement{
+	position: relative;
+    zoom: 1;
+	padding-left: 25px;
+	height: 36px;
+	line-height: 36px;
+	background: url("../../img/mall/userCenter/file.jpg") left center no-repeat;
+	color: #2b2b2b;
+}
+p.fileManagement span{
+/* 	position: absolute; */
+/* 	left: 25px; */
+	top: 0;
+}
+p.fileManagement a.mod{
+	left: 135px;
+}
+p.fileManagement a.del{
+	left: 165px;
+}
+.greyfont{
+	top: 0;
+	color: #8c8c8c;
+}
+.collectionInput{
+	position: absolute;
+	left: 25px;
+	top: 6px;
+	width: 102px;
+	height: 19px;
+	background: url("../../img/mall/userCenter/user-input.gif") no-repeat;
+	padding: 2px;
+	border: none;
+}
+button.collectionSave{
+	position: absolute;
+	left: 130px;
+	top: 6px;
+  height: 23px;
+  width: 53px;
+  margin-left: 10px;
+  background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat;
+  text-align: center;
+  border: none;
+}
+button.collectionCacel{
+	position: absolute;
+	left: 190px;
+	top: 6px;
+  height: 23px;
+  width: 53px;
+  margin-left: 10px;
+  background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat;
+  text-align: center;
+  border: none;
+}
+.fontLimit{
+	padding-left: 21px;
+	color: #8a8a8a;
+	margin-bottom: 11px;
+}
+.new-collect{
+	position: relative;
+    zoom: 1;
+	height: 23px;
+	padding-left: 213px;
+	padding-top: 8px;
+}
+.hide{
+	display: none;
+}
+.show{
+	display: block;
+}
+button.addClass{
+	position: absolute;
+	left: 127px;
+	top: 6px;
+	width: 65px;
+  height: 23px;
+  margin-left: 10px;
+  background: url("../../img/mall/userCenter/btn-style2.gif") no-repeat;
+  border: none;
+}
+button{
+	cursor: pointer;
+}
+/*_browsingHistory.html
+--------------------------------------------------------------------------------------------*/
+button.emptyHistory{
+  margin-left: 10px;
+  text-align: center;
+  width: 97px;
+  height: 23px;
+  background: url("../../img/mall/userCenter/btn-style.gif") no-repeat;
+  border: none;
+  float: left;
+  margin-top: 5px;
+}
+button.BuyBulk-Two {
+  width: 65px;
+  height: 23px;
+  background: url("../../img/mall/userCenter/btn-style2.gif") no-repeat;
+  border: none;
+  margin-left: 5px;
+  text-align: center;
+  float: left;
+  margin-top: 5px;
+}
+.bh-popup{
+	display: none;
+}
+/*_pamentConfirmation.html
+--------------------------------------------------------------------------------------------*/
+.pink-line .oragne{
+	color: #f25c26;
+	font-size: 12px;
+	padding-left: 0;
+}
+.pagmentInput{
+	width: 108px;
+	height: 19px;
+  padding: 3px 5px;
+  background: url("../../img/mall/userCenter/zip-code.gif") no-repeat;
+  border: none;
+}
+.refundP-second input,.refundP-second .thirdSelect{
+	background: none;
+	padding: 0;
+	border: 1px solid #e6e6e6;
+	height: 19px;
+	width: 112px;
+}
+.refundP-second select.thirdSelect{
+	padding: 2px;
+	height: 21px;
+	width: 114px;
+}
+select.thirdSelect {
+  border: 2px solid #e6e6e6;
+  height: 23px;
+  width: 122px;
+}
+
+/*_pamentConfirmation.html
+--------------------------------------------------------------------------------------------*/
+.fontGrey{
+	color: #6e6e64;
+}
+button.giftCard{
+  background: url("../../img/mall/userCenter/giftCard.jpg") no-repeat scroll 0 0 transparent;
+  border: medium none;
+  height: 23px;
+  left: 730px;
+  margin-top: -2px;
+  position: absolute;
+  top: 8px;
+  width: 83px;
+}
+.padding-top-16{
+	padding-top: 16px;
+}
+.fontcolorBase{
+	color: #333333;
+}
+td.myCoponTable-h29 {
+  border-bottom: 1px solid #EAEAEA;
+  color: #666666;
+  height: 29px;
+  line-height: 29px;
+}
+p.notice-second {
+  color: #888888;
+  margin-left: 22px;
+  height: 30px;
+  line-height: 30px;
+}
+.user-content div.refundP-second{
+	width: 701px;
+	position: relative;
+    zoom: 1;
+	padding-left: 85px;
+	height: 23px;
+	line-height: 23px;
+	color: #888888;
+	margin-bottom: 8px;
+	}
+.user-content div.refundP-second label.refundInput-p-81{	
+  width: 82px;
+  position: absolute;
+  top:0px;
+  left: 0px;
+  text-align: right;
+  color: #000;
+  font-size: 12px;
+}
+.userCenter-content button.commit{
+	width: 55px;
+	height: 24px;
+	margin-left: 85px;
+	background: url("../../img/mall/userCenter/commit.jpg") no-repeat;
+	border: none;
+	text-align: center;
+	margin-top: 12px;
+}
+select.thirdSelect {
+  border: 1px solid #8498BD;
+  height: 21px;
+  width: 118px;
+}
+p.bookShow{
+	height: 18px;
+	line-height: 18px;
+	margin-top: 17px;
+}
+p.bookPrice{
+	margin-top: 28px;
+	_margin-top: 14px;
+}
+p.Row-Spacing{
+	height: 18px;
+	line-height: 18px;
+}
+p.lineheight-24{
+	height: 24px;
+	line-height: 24px;
+}
+td.myorder{
+	padding-bottom: 14px;
+	padding-top: 4px;
+	line-height: 14px;
+	height: 14px;
+}
+p.paegup-top-15{
+	margin-top: 15px;
+	padding-bottom: 20px;
+	text-align: right;
+	padding-right: 20px;
+}
+/*p.paegup-top-15 a{
+  border: 1px solid #CCCCCC;
+  color: #757575;
+  display: inline-block;
+  font-weight: bold;
+  height: 16px;
+  margin-right: 3px;
+  min-width: 15px;
+  _width:15px;
+  padding: 3px;
+  text-align: center;
+}
+p.paegup-top-15 a.nextPage {
+  background: url("../../img/mall/userCenter/notes.png") no-repeat scroll right center transparent;
+  width: 60px;
+  color: #1468a6;
+}
+p.paegup-top-15 a.upPage{
+  background: url("../../img/mall/userCenter/upPageImage.jpg") no-repeat scroll left center transparent;
+  width: 60px;
+  color: #000;
+}
+p.paegup-top-15 a.present{
+	color: #ff4500;
+	border: 1px solid #ff4500;
+	background: #f6f6f4;
+}*/
+td.margin-left-32{
+	text-align: left;
+	padding-left: 32px;
+} 
+td.margin-left-81{
+	text-align: left;
+	padding-left: 81px;
+} 
+td.viewTable{
+	padding-top: 14px;
+	padding-bottom: 14px;
+	color: #333;
+}
+.viewTable .bookName{
+	color: #136ec2;
+}
+p.lineheight-23{
+	height: 23px;
+	line-height: 23px;
+}
+p.browsingInput{
+	float: left;
+	height: 31px;
+	line-height: 31px;
+	margin-left: 30px;
+	_margin-left: 13px;
+}
+p.collectionInput {
+  height: 31px;
+  line-height: 31px;
+  margin-left: 25px;
+}
+button.yes {
+	float: left;
+	margin-left: 7px;
+	margin-top: 1px;
+	width: 53px;
+	height: 23px;
+	line-height: 23px;
+  background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat scroll 0 0 transparent;
+  border: none;
+}
+.collectionTable{
+	height: 31px;
+	background-color: #F4F4F4;
+	border-bottom: 1px solid #E4E4E4;
+	border-top: 1px solid #E4E4E4;
+}
+.collectionTable #selectAll{
+	position: absolute;
+	left: 22px;
+	top: 9px;
+	*top: 4px;
+}
+.collectionTable  label{
+	position: absolute;
+	left: 43px;
+	top: 7px;
+}
+.collectionTable label.inner-label{
+	position: static;
+}
+.collectionTable span.move{
+	float: left;
+	margin-left: 15px;
+	margin-top: 4px;
+	color: #333333;
+}
+span.collect{
+  color: #216DC1;
+  font-weight: 600;
+  float: right;
+}
+td.myAsk{
+	height: 30px;	
+}
+td.myAnswer{
+	line-height: 18px;
+    padding-top: 5px;
+	color: #333;
+}
+td.myAnswer span{
+	padding-left: 15px;
+	color: #888;
+}
+td.myReplay{
+	height: 30px;	
+	color: #333;
+}
+input.inupt-mail-W72{
+	width: 70px;
+	height: 19px;
+	padding: 2px;
+	background: url("../../img/mall/userCenter/refund-input.gif") no-repeat;
+	border: none;
+}
+.mrging-top-17{
+	margin-top: 17px;
+}
+button.marging-left-86{
+ 	background: url("../../img/mall/userCenter/btn-style1.gif") no-repeat scroll 0 0 transparent;
+	border: medium none;
+	height: 23px;
+	margin-left: 86px;
+	margin-top: 4px;
+	text-align: center;
+	width: 53px;
+}
+.baseRed{
+	font-family: '微软雅黑';
+	color: #D70000;
+}
+.color-68{
+	color: #686868;
+}
+.color-8a{
+	color: #8a8a8a;
+}
+.color-aa{
+	color: #aaaba3;
+}
+table thead tr{
+	color: #333;
+}
+.set-default{
+	color: #888;
+	margin-left:15px;
+}
+.money{
+	font-family: '微软雅黑';
+}
+
+/*__recharge.html
+--------------------------------------------------------------------------------------------*/
+div.recharge{
+	padding-left: 148px;
+	height: 30px;
+	font:14px;
+	position: relative;
+    zoom: 1;
+}
+label.recharge-text{
+	width: 140px;
+	text-align: right;
+position: absolute;
+top:0px;
+left:0px;
+height: 19px;
+line-height: 19px;
+
+}
+form.want-recharge{
+	margin-top: 33px;
+}
+input.recharge-money{
+	width: 97px;
+    height: 17px;
+    border: 1px solid #a4a4a4;
+    padding: 2px;
+    line-height: 17px;
+}
+span.grey-12{
+	font-size: 12px;
+	color: #aaaaaa;
+}
+p.grey-line{
+	width: 635px;
+	border-bottom: 1px #e9e9e9 solid;
+	margin-top: 19px;
+}
+button.next{
+	width: 81px;
+	height: 31px;
+  border: medium none;
+  background: url("../../img/mall/userCenter/next.jpg") no-repeat scroll 0 0 transparent;
+  margin-left: 148px;
+  margin-top: 22px;
+  text-align: center;
+}
+.been-read td{
+	color: #666;
+}
+
+.add-address{
+  background: url("../../images/myimg/add.PNG") no-repeat scroll 0 0 transparent;
+  border: medium none;
+  height: 23px;
+  width: 96px;
+  margin-top: -2px;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+}
+/*__application-returns-application.html
+--------------------------------------------------------------------------------------------*/
+.return-text{
+	text-align: left;
+	padding-left:20px; 
+}
+.returns-type{
+	padding-left:110px;
+	position: relative;
+	zoom: 1;
+	line-height: 30px;
+}
+.returns-type .re-title,
+.returns-type label{
+	width:104px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	text-align: right;
+}
+.returns-type .inner-label{
+	position: static;
+}
+.applation-return{
+	margin-top: 18px;
+}
+/*修改 开始*/
+.quotes-description{
+	width: 593px;
+	height: 124px;
+	padding-left: 7px;
+	padding-top: 11px;
+}
+.quotes-color{
+	color: #888888;
+}
+.address-bar {
+    border-bottom: 1px solid #EAEAEA;
+    margin: 0 auto;
+    padding-top: 20px;
+    /*padding-left: 90px;*/
+    width: 711px;
+}
+.address-bar .title {
+    border-bottom: 1px solid #EAEAEA;
+    color: #136EC2;
+    font-weight: bold;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 20px;
+}
+.address-bar form {
+    margin-top: 13px;
+}
+.address-bar p {
+    height: 36px;
+    line-height: 36px;
+    padding-left: 63px;
+    position: relative;
+    zoom: 1;
+}
+.address-bar .title span {
+    color: #666666;
+    font-weight: lighter;
+    padding-left: 25px;
+}
+.address-bar label {
+    color: #333333;
+}
+.address-bar .mobile-num {
+    background: url("../../img/mall/userCenter/mobile-num.gif") no-repeat scroll 0 0 transparent;
+    width: 185px;
+}
+.address-bar input {
+    border: medium none;
+    height: 23px;
+    line-height: 23px;
+    padding: 0 5px;
+}
+.address-bar .consignee-name {
+    background: url("../../img/mall/userCenter/consignee-name.gif") no-repeat scroll 0 0 transparent;
+    width: 185px;
+}
+.address-bar select {
+    border: 1px solid #7F9DB9;
+    height: 23px;
+    width: 123px;
+}
+.address-bar .street-address {
+    background: url("../../img/mall/userCenter/street-address.gif") no-repeat scroll 0 0 transparent;
+    width: 381px;
+}
+.address-bar .zip-code {
+    background: url("../../img/mall/userCenter/zip-code.gif") no-repeat scroll 0 0 transparent;
+    width: 108px;
+}
+.address-bar .tel-num1 {
+    background: url("../../img/mall/userCenter/tel-num1.gif") no-repeat scroll 0 0 transparent;
+    width: 44px;
+}
+.address-bar .tel-num2 {
+    background: url("../../img/mall/userCenter/tel-num2.gif") no-repeat scroll 0 0 transparent;
+    width: 101px;
+}
+.address-bar .tel-num3 {
+    background: url("../../img/mall/userCenter/tel-num3.gif") no-repeat scroll 0 0 transparent;
+    width: 44px;
+}
+.address-bar input.set-default {
+    left: 140px;
+    position: absolute;
+    top: 6px;
+}
+.address-bar input{
+	border:1px solid #A0A0A0;
+}
+.consignee-holder{
+    margin: 10px 0;
+}
+.consignee-holder .consignee-list li label span {
+    padding: 0 2px;
+}
+/*修改 结束*/
+.description-color{
+	color: #666666;
+}
+.description-height{
+	height: 132px;
+	margin-bottom: 20px;
+}
+.goods-state{
+border: 1px solid #7F9DB9;
+    height: 23px;
+    width: 114px;
+    }
+.color-8{
+	color: #888888;
+} 
+.submit-app{
+  background: url("../../img/mall/userCenter/submit-app.jpg") no-repeat scroll 0 0 transparent;
+  border: medium none;
+  height: 31px;
+  width: 86px;
+  margin-top: 29px;
+  margin-left: 110px;
+}
+.margin-top-5{
+	margin-top: 5px;
+}
+.dear-custom{
+	height: 117px;
+	background: #f4f4f4;
+	margin-top: 40px;
+		padding: 27px 32px 0px 0px;
+
+}
+.dear-cancel{
+	padding-left: 145px;
+	position: relative;
+	color: #666666;
+	zoom:1;
+}
+.dear-cancel label{
+width: 134px;
+position: absolute;
+top:0px;
+left:0px;
+text-align: right;
+	height: 30px;
+	line-height: 30px;
+	background: url("../../img/mall/userCenter/light.jpg") no-repeat scroll 47px transparent;
+}
+.dear-cancel .tip{
+	height: 30px;
+	line-height: 30px;
+}
+/* 新增页面-userCenter-myQuestion.html, */
+.question-form{
+	padding-left: 22px;
+	margin-top: 27px;
+}
+.pink-line .i-wanna-cmplt{
+	background: url("../../img/mall/usrCenter-Complain-btn-bg.png") no-repeat left top transparent;
+}
+.back-img .i-wanna-cmplt{
+	background: url("../../images/myimg/ans1.PNG") no-repeat left top transparent;
+}
+.question-form .control-label{
+	padding-right: 18px;
+}
+.common-form .control-group{
+	padding-left: 88px;
+}
+.common-form .control-group span{
+	color: #666666;
+	padding-left: 4px;
+}
+.question-form .controls label{
+	vertical-align: top;
+	margin-left: -3px;
+	margin-right: 2px;
+}
+.question-form .ques-radio{
+	height: 18px;
+	_border: none;
+	_background: none;
+}
+.question-form .pad-topie{
+	_padding-top: 3px;
+}
+.question-form .pad-bottomie{
+	display: inline-block;
+	_padding-bottom: 10px;
+	
+}
+.question-form .newText{
+	border: 1px solid #e6e6e6;
+	width: 536px;
+	height:30px;
+	background: none;
+	margin-bottom: 6px;
+}
+.question-form textarea{
+	margin-top: 3px;
+	border: 1px solid #e6e6e6;
+	width: 536px;
+	height: 252px;
+}	
+.question-form .control-group .tip{
+	height: 36px;
+	line-height: 35px;
+	color: #666666;
+}
+.question-form .form-action{
+	padding-left: 88px;
+}
+.question-form .form-action button{
+	margin-top: -3px;
+	height: 28px;
+	border-radius: 3px;
+	padding: 0 11px;
+	_padding :0 3px;
+	font-weight: bold;
+	background: url("../../../resources/img/mall/userCenter-myQuestion-button-bg.png") repeat-x left top transparent;
+}
+/* 新增页面-——站内消息 */
+.message-line{
+	height: 29px;
+	line-height: 29px;
+	padding: 4px 0 0 4px;
+}
+.message-line a{
+	padding-left: 36px;
+}
+.message-table{
+	margin-top: -2px;
+}
+.common-table{
+	width: 100%;
+	text-align: center;
+	padding-left: 10px;
+	color: #333333;
+}
+.left{
+	text-align: left;
+	padding-left: 40px;
+}
+.message-table thead,.message-table tfoot{
+	background-color: #f4f4f4; 
+}
+.message-table thead{
+	border-top: 1px solid #eaeaea;
+	height: 23px;
+	line-height: 23px;
+}
+.message-table thead th{
+	font-weight: normal;
+	padding-bottom: 1px;
+}
+.first-line{
+	position: relative;
+    zoom: 1;
+	display: inline-block;
+	margin-left: -11px;
+}
+.message-table tbody tr{
+	height: 35px;
+	line-height: 35px;
+}
+.message-table tfoot tr{
+	height: 31px;
+	line-height: 31px;
+}
+.message-table tbody td{
+	padding-top: 1px;
+}
+.message-table tfoot,.message-table tr{
+	border-bottom: 1px solid #eaeaea;
+}
+.common-table .first-line input{
+	position: absolute;
+	top: 11px;
+	left: -22px;
+}
+.common-table .select-all input{
+	top: 8px;
+}
+.message-table a{
+	color: #136ec2;
+}
+.message-table .pad-right{
+	padding-right: 4px;
+}
+.common-table .read{
+	color: #666666;
+}
+.common-form{
+	padding: 3px 0 0 5px;
+	text-align: left;
+}
+/**
+ * 订单修改页面
+ * by huanhuan
+ */
+
+.delivery-method-list {
+  line-height: 30px;
+  padding-left: 16px;
+}
+.delivery-method-list li {
+  padding-left: 19px;
+  position: relative;
+  zoom: 1;
+}
+.delivery-method-list input {
+  display: block;
+  height: 13px;
+  left: 0;
+  position: absolute;
+  top: 7px;
+  width: 13px;
+}
+.delivery-method-list label {
+  display: inline-block;
+  width: 277px;
+}
+.delivery-method-list .costs {
+  display: inline-block;
+  width: 162px;
+}
+.costs em {
+  font-family: '微软雅黑';
+}
+.costs b {
+  font-weight: lighter;
+}
+.time-select {
+  color: #666666;
+}
+.time-select select {
+  color: #666666;
+}
+.pay-list {
+  line-height: 30px;
+  padding-left: 16px;
+}
+.pay-list li {
+  min-height: 30px;
+  padding-left: 19px;
+  position: relative;
+  zoom: 1;
+}
+.pay-list li .pay-radio {
+  display: block;
+  height: 13px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 13px;
+}
+.online-pay-holder {
+  padding-left: 20px;
+}
+.online-pay-holder h3 {
+  font-weight: normal;
+  height: 30px;
+}
+.online-pay-holder li {
+  float: left;
+  height: 33px;
+  margin-bottom: 12px;
+  padding-left: 0;
+  width: 170px;
+}
+.online-pay-holder li input {
+  float: left;
+  height: 13px;
+  margin: 10px 5px;
+  width: 13px;
+}
+.online-pay-holder li label {
+  display: block;
+  float: left;
+  height: 33px;
+}
+.order-sub{
+	text-align: right;
+}
+.order-sub button{
+	width: 80px;
+	height: 28px;
+	background: url("../../img/mall/userCenter/sub-order-btn.gif") no-repeat;
+	border: none;
+}
+.pink-line{
+	margin-bottom: 0;
+	position: relative;
+    zoom: 1;
+}
+.title-list{
+	padding: 23px 0 0 22px;
+	line-height: 27px;
+}
+.title-list span{
+	color: #666666;
+}
+.title-list span a:hover{
+	text-decoration: none;
+	color: #666666;
+}
+.title-list span a.current{
+	font-weight: bold;
+	color: #136ec2;
+}
+.pink-line .new-btn{
+	display: block;
+	position: absolute;
+	width: 73px;
+	height: 23px;
+	right: 24px;
+	top: 5px;
+	background: url("../../img/mall/userCenter/new-pay-btn.png") no-repeat 0 0 transparent;
+}
+.pay-table{
+	border-bottom: 1px solid #e6e6e6;
+}
+.pay-table tbody tr{
+	line-height: 12px;
+	color: #333333;
+} 
+.pay-table tbody tr td{
+	padding-top: 34px;
+}
+.pay-table tbody tr a{
+	color: #136ec2;
+}
+.pay-table tbody tr a:hover{
+	text-decoration: none;
+}
+.pay-table tfoot tr td{
+	height: 34px;
+}
+.pay-table .num-color{
+	color: #136ec2;
+}
+.mailForm{
+	margin-top: 22px;
+}
+.input-file{
+	height: 23px;
+}
+.reciever-lable{
+	display:inline-block;
+	text-align: right;
+	min-width:85px;
+}
+/**退换货新增样式**/
+p.success-info{
+	position:relative;
+	z-index:1;
+}
+a.success-add{
+	border:solid 1px #d0d0d0;
+	text-decoration: none;
+	position:relative;
+	font-size:12px;
+	display:block;
+	height:25px;
+	width:60px;
+	color:#95caff;
+	background-color:#fff;
+	margin-left:10px;
+	z-index:3;
+}
+a.success-add:hover,a.success-add:visited,a.success-add:active,a.success-add:link{
+	text-decoration: none;
+	color:#95caff;
+}
+a.success-add.selected{
+	border-left:none;
+	background-color:#F3F3F3;
+	color:#000;
+}
+.success-add-info{
+	position:absolute;
+	width:230px;
+	float:right;
+	border:solid 1px #d0d0d0;
+	margin-top:-27px;
+	margin-left:-221px;
+    background-color: #fff;
+    z-index:2;
+    padding-bottom:10px;
+}
+.success-add-info h4 {
+	height: 25px;
+	line-height:25px;
+	background-color: #F3F3F3;
+	font-size: 12px;
+	padding-left:55px;
+	color:#95caff;
+	text-align: left;
+}
+.success-add-info h4 span{
+	float:left;
+	display: block;
+	font-size: 14px;
+	color:#59acff;
+	line-height:25px;
+	margin-right:5px;
+	font-family: tahoma;
+}
+.success-add-info p {
+	line-height:15px;
+	margin-bottom: 0;
+	padding: 10px 10px;
+	color: #666;
+	text-align: left;
+}
+
+.success-add-info p.btnRow {
+	text-align: left;
+	margin-left:60px;
+	cursor: pointer;
+}
+
+.success-add-info .btn-success {
+	display: inline-block;
+	line-height: 1;
+	padding: 3px 5px;
+	background-color: #999999;
+	color: #fff;
+}

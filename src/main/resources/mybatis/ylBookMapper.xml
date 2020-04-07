@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.ylBookMapper">
+   <select id="findAll" resultMap="BaseResultMap">
+        select * from yl_book
+        left join yl_book_category
+        on yl_book_category.yl_category_id = yl_book.yl_book_category
+   </select>
+   
+   <select id="findById" parameterType="int" resultMap="BaseResultMap">
+		select * from yl_book
+		where yl_book_id = #{ylbookId}
+	</select>
+	<select id="findByName" resultMap="BaseResultMap">
+	   select * from yl_book where yl_book_name like '%${ylbookName}%'
+	</select>
+	<insert id="insert">
+	    insert into yl_book(yl_book_id,yl_book_name,yl_book_writer,yl_book_date,yl_book_concern,yl_book_price,yl_book_category)
+		values (#{ylbookId},#{ylbookName},#{ylbookWriter},#{ylbookDate},#{ylbookConcern},#{ylbookPrice},#{ylbookCategory.ylcategoryId})
+	
+	</insert>
+	<update id="update">
+		update yl_book set
+				yl_book_name = #{ylbookName},
+				yl_book_writer = #{ylbookWriter},
+				yl_book_date = #{ylbookDate},
+				yl_book_concern =#{ylbookConcern},
+				yl_book_price = #{ylbookPrice}
+				where yl_book_id  =#{ylbookId}
+	</update>
+	
+    <resultMap type="com.no1.cz.domain.ylBook" id="BaseResultMap">
+    <id column="yl_book_id" property="ylbookId" jdbcType="INTEGER"/>
+    <result column="yl_book_name" property="ylbookName" jdbcType="VARCHAR"/>
+    <result column="yl_book_writer" property="ylbookWriter" jdbcType="VARCHAR"/>
+    <result column="yl_book_date" property="ylbookDate" jdbcType="DATE"/>
+    <result column="yl_book_concern" property="ylbookConcern" jdbcType="VARCHAR"/>
+    <result column="yl_book_price" property="ylbookPrice" jdbcType="DOUBLE"/>
+   <!--<result column="yl_book_category" property="ylbookCategory" jdbcType="INTEGER"/>-->   
+     <association property="ylbookCategory" javaType="com.no1.cz.domain.ylBookCategory"
+        resultMap="com.no1.cz.mapper.ylBookCategoryMapper.BaseResultMap"/>
+    </resultMap>
+</mapper>

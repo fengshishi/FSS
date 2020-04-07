@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.CartMapper">
+
+  <resultMap id="BaseResultMap" type="com.no1.cz.domain.Cart">
+    <id column="cart_id" jdbcType="INTEGER" property="cartId" />
+    <result column="books_quantity" jdbcType="INTEGER" property="booksQuantity" />
+    <result column="cart_checked" jdbcType="INTEGER" property="cartChecked" />
+    <result column="creat_time" jdbcType="TIMESTAMP" property="creatTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="cart_price" jdbcType="DOUBLE" property="cartPrice" />
+    <association property="booksId" column="cart.books_id" javaType="com.no1.cz.domain.Books" 
+    				resultMap="com.no1.cz.mapper.BooksMapper.BaseResultMap"/>
+     <association property="userId" column="user_id" javaType="com.no1.cz.domain.User" 
+    				resultMap="com.no1.cz.mapper.UserMapper.BaseResultMap"/>
+    
+  </resultMap>
+  <select id="selectByUser" parameterType="int" resultMap="BaseResultMap">
+  	SELECT * FROM cart 
+  	left join books 
+  	on books.books_id = cart.books_id  
+  	where user_id = #{userId}
+   </select>
+   		
+   <delete id="deleteByUser" parameterType="int">
+   		delete from cart where user_id = #{userId}
+   </delete>
+   
+   <delete id="deleteByCart" parameterType="int">
+   		delete from cart where cart_id = #{cartId}
+   </delete>
+   
+   <insert id="insertCart" parameterType="com.no1.cz.domain.Cart">
+   		insert into cart (cart_id,user_id,cart_price,books_id,books_quantity)
+		values (#{cartId},#{userId.userId},#{cartPrice},#{booksId.booksId},#{booksQuantity})
+   </insert>
+   
+   <update id="updateCartNum">
+   		UPDATE cart
+        SET cart.books_quantity = #{booksQuantity},
+	    cart.cart_price = #{cartPrice}
+	    WHERE cart.books_id =#{booksId} and cart.user_id=#{userId}
+   </update>
+   
+</mapper>

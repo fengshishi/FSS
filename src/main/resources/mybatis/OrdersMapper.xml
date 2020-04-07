@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.OrdersMapper">
+
+	<resultMap id="BaseResultMap" type="com.no1.cz.domain.Orders">
+		<id column="order_id" jdbcType="INTEGER" property="orderId" />
+
+		<result column="order_name" jdbcType="VARCHAR"
+			property="orderName" />
+		<result column="order_phone" jdbcType="VARCHAR"
+			property="orderPhone" />
+		<result column="order_address" jdbcType="VARCHAR"
+			property="orderAddress" />
+		<result column="order_price" jdbcType="VARCHAR"
+			property="orderPrice" />
+		<association property="orderUser"
+			column="orders.order_user" javaType="com.no1.cz.domain.User"
+			resultMap="com.no1.cz.mapper.UserMapper.BaseResultMap" />
+		<association property="orderStatus"
+			column="orders.order_status" javaType="com.no1.cz.domain.Status"
+			resultMap="com.no1.cz.mapper.StatusMapper.BaseResultMap" />
+	</resultMap>
+	
+	<select id="selectAll" parameterType="int"
+		resultMap="BaseResultMap">
+		SELECT * FROM orders
+        left join user
+		on user.user_id = orders.order_user
+		left join status
+		on orders.order_status = status.status_id
+		where user_id = #{userId}
+	</select>
+
+	<insert id="insert" parameterType="com.no1.cz.domain.Orders">
+		insert into orders (order_id, order_name, order_phone, order_address, order_user, order_status, order_price)
+		values (#{orderId}, #{orderName}, #{orderPhone}, #{orderAddress}, #{orderUser.userId}, #{orderStatus.statusId}, #{orderPrice})
+	</insert>
+	<update id="updateStatus">
+		UPDATE orders
+		SET orders.order_status = 0
+		WHERE orders.order_id = #{orderId}
+	</update>
+	<select id="selectOrders"
+		resultMap="BaseResultMap">
+		SELECT * FROM orders
+		left join status
+		on orders.order_status = status.status_id
+		where order_id = #{orderId}
+	</select>
+
+</mapper>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://www.mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.AnswersMapper">
+  <resultMap id="BaseResultMap" type="com.no1.cz.domain.Answers">
+    <id column="answers_id" jdbcType="INTEGER" property="answersId" />
+    <result column="answers_name" jdbcType="VARCHAR" property="answersName" />
+    <result column="answers_content" jdbcType="VARCHAR" property="answersContent" />
+    <result column="answers_date" jdbcType="TIMESTAMP" property="answersDate" />
+  	<association column="answers_type" property="answersType"
+			javaType="com.no1.cz.domain.AnswersType" 
+			resultMap="com.no1.cz.mapper.AnswersTypeMapper.BaseResultMap" />
+  	<association property="userId" column="user_id" 
+  			javaType="com.no1.cz.domain.User"
+			resultMap="com.no1.cz.mapper.UserMapper.BaseResultMap" />
+  </resultMap>
+  	<!-- 我要提问 -->	
+	<insert id="insertanswers"  parameterType="com.no1.cz.domain.User">
+		insert into answers 
+		 (user_id, answers_type, answers_name, answers_content, answers_date) 
+		values (#{userId.userId}, #{answersType.antypeId},
+		 #{answersName}, #{answersContent}, #{answersDate})
+	</insert>
+	
+	<!-- 查userId的所有提问的问题 -->
+  	<select id="answersList" resultMap="BaseResultMap">
+		<!--  select answers.answers_id,user.user_id,answerstype.antype_id,
+                answers.answers_name,answerstype.antype_name,
+                answers.answers_content,answers.answers_date
+          from  user,answers,answerstype 
+          where answers.user_id=user.user_id 
+          and answers.answers_type=answerstype.antype_id -->
+	    select * from answers
+		left join user
+		on user.user_id = answers.user_id
+		left join answerstype
+		on answerstype.antype_id = answers.answers_type
+		where answers.user_id=#{userId}
+	</select>
+	
+	<select id="selectAll" resultMap="BaseResultMap">
+  	select * from answers
+    </select>
+	
+ </mapper>

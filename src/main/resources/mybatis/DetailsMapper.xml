@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.DetailsMapper">
+   <resultMap id="BaseResultMap" type="com.no1.cz.domain.Details">
+		<id column="detail_id" jdbcType="INTEGER" property="detailId" />
+		<result column="detail_num" jdbcType="INTEGER"
+			property="detailNum" />
+		<result column="detail_price" jdbcType="INTEGER"
+			property="detailPrice" />
+	
+		<result column="detail_order" property="detailOrder" jdbcType="VARCHAR" />
+		<!-- <association property="detailOrder"
+			column="detail_order" javaType="com.no1.cz.domain.Orders"
+			resultMap="com.no1.cz.mapper.OrdersMapper.BaseResultMap" /> -->
+		<association property="detailCart"
+			column="detail_cart" javaType="com.no1.cz.domain.Cart"
+			resultMap="com.no1.cz.mapper.CartMapper.BaseResultMap" />
+	</resultMap>
+	
+	<insert id="insert" parameterType="com.no1.cz.domain.Details">
+		insert into details (detail_id, detail_price, detail_num, detail_cart, detail_order)
+		values (#{detailId}, #{detailPrice}, #{detailNum}, #{detailCart.cartId}, #{detailOrder})
+	</insert>
+	
+	<select id="findDetailsById" parameterType="int" resultMap="BaseResultMap">
+		SELECT * FROM details 
+  		left join cart 
+		on details.detail_cart=cart.cart_id
+  		where cart.user_id=#{userId}
+	</select> 
+	
+</mapper>

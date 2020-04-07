@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.BusinessMapper">
+<insert id="regist" parameterType="com.no1.cz.domain.Business">
+ insert into business
+(business_name,business_pwd,business_email, business_phone,create_time)
+		values(#{businessName},#{businessPwd},#{businessEmail},#{businessPhone},#{createTime})
+</insert>
+<select id="login" parameterType="map" resultMap="BaseResultMap">
+		select
+		business_name,business_pwd from business
+		where business_name=#{businessName} and
+		business_pwd=#{businessPwd}
+	</select>
+	<select id="findBusinessId" parameterType="map" resultMap="BaseResultMap">
+		select business.business_id from business
+        where business.business_name=#{businessName}
+	</select>
+
+<resultMap type="com.no1.cz.domain.Business" id="BaseResultMap">
+		<id column="business_id" property="businessId" jdbcType="INTEGER" />
+		<result column="business_name" property="businessName" jdbcType="VARCHAR" />
+		<result column="business_pwd" property="businessPwd" jdbcType="VARCHAR" />
+		<result column="business_email" property="businessEmail" jdbcType="VARCHAR" />
+		<result column="business_phone" property="businessPhone" jdbcType="VARCHAR" />
+		<result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+		
+	</resultMap>
+  
+
+</mapper>

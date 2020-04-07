@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.AnswersTypeMapper">
+	
+	<resultMap id="BaseResultMap" type="com.no1.cz.domain.AnswersType">
+		<id column="antype_id" property="antypeId" jdbcType="INTEGER" />
+		<result column="antype_name" property="antypeName" jdbcType="VARCHAR" />
+	</resultMap>
+<!-- 增加问题类型 -->
+  <insert id="insert" parameterType="com.no1.cz.domain.AnswersType">
+    insert into answerstype (antype_id, antype_name)
+    values (#{antypeId}, #{antypeName})
+  </insert>
+
+ <!-- 查询所有问题类型 -->
+ <select id="listtype" resultMap="BaseResultMap">
+ 	select * from answerstype
+ </select>
+</mapper>

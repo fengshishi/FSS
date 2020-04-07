@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.no1.cz.mapper.UserMapper">
+	<insert id="regist" parameterType="com.no1.cz.domain.User">
+		insert into user
+		(user_name,user_pwd,user_email, user_phone,create_time)
+		values(#{userName},#{userPwd},#{userEmail},#{userPhone},#{createTime})
+	</insert>
+
+
+	<select id="login" parameterType="map" resultMap="BaseResultMap">
+		select
+		user_name,user_pwd from user
+		where user_name=#{userName} and
+		user_pwd=#{userPwd}
+	</select>
+	<update id="modifyPasswordByUsername"
+		parameterType="com.no1.cz.domain.User">
+		update user set user_pwd = #{userPwd}
+		where user_name =
+		#{userName}
+	</update>
+	<select id="findUsersByUsername"
+		parameterType="java.lang.String" resultMap="BaseResultMap">
+		select * from user
+		where
+		user_name = #{userName}
+	</select>
+
+
+	<select id="findAll" resultMap="BaseResultMap">
+		select * from user
+	</select>
+
+	<select id="selectById" parameterType="int"
+		resultMap="BaseResultMap">
+		select * from user where user_id=#{userId}
+	</select>
+
+	<delete id="deleteById" parameterType="int">
+		delete from user
+		where user_id = #{userId}
+	</delete>
+    <insert id="insert" parameterType="com.no1.cz.domain.User">
+		insert into user
+		 (user_name,user_pwd,user_email, user_phone,create_time)
+		values (#{userName},#{userPwd},#{userEmail},#{userPhone},#{createTime})
+	</insert>
+	<update id="update" >
+		update user
+		set user_name=#{userName},
+		user_pwd=#{userPwd},
+		user_email=#{userEmail},
+		user_phone=#{userPhone},
+		update_time=#{updateTime}
+		where user_id=#{userId}
+	</update>
+    <select id="findUserId" parameterType="map" resultMap="BaseResultMap">
+		select user.user_id from user
+        where user.user_name=#{userName}
+	</select>
+	<resultMap type="com.no1.cz.domain.User" id="BaseResultMap">
+		<id column="user_id" property="userId" jdbcType="INTEGER" />
+		<result column="user_name" property="userName"
+			jdbcType="VARCHAR" />
+		<result column="user_pwd" property="userPwd" jdbcType="VARCHAR" />
+		<result column="user_email" property="userEmail"
+			jdbcType="VARCHAR" />
+		<result column="user_phone" property="userPhone"
+			jdbcType="DOUBLE" />
+		<result column="create_time" property="createTime"
+			jdbcType="TIMESTAMP" />
+		<result column="update_time" property="updateTime"
+			jdbcType="TIMESTAMP" />
+	</resultMap>
+
+</mapper>

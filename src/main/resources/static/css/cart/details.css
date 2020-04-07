@@ -1,0 +1,28 @@
+  .book-intro {
+     width: 200px;
+    height: 400px;
+    background:;
+    float:left;
+    margin-left:0px;  
+      
+     }
+     
+     .book-sale-info{
+       width: 380px;
+       height: 400px;
+       background:;
+       float:right;
+       margin-right:900px;
+    
+     }
+   
+.roduce{
+	
+	  width: 100px;
+       height:100px;
+       background:;
+       float:right;
+       margin-right:-200px;
+       margin-top:-500px;  
+	
+}
